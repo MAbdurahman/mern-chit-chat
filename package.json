@@ -1,0 +1,35 @@
+{
+  "name": "mern-chit-chat",
+  "version": "1.0.0",
+  "main": "backend/server.js",
+  "type": "module",
+  "repository": "https://github.com/MAbdurahman/mern-chit-chat.git",
+  "author": "Mahdi Abdurrahman <mdbdrrhm@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "SET NODE_ENV=development& nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "prod": "SET NODE_ENV=production& node backend/server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1",
+    "multer": "^1.4.5-lts.1",
+    "socket.io": "^4.7.5"
+  },
+  "nodemonConfig": {
+    "delay": 2000
+  }
+}

@@ -4,6 +4,8 @@
 ## Features
 - MongoDB, Express.js, ReactJS, and Node.js
 - Authentication and Authorization with JWT
+- Tailwind CSS v4
+- Shadcn UI Components
 
 
 ### Create config.env file in config directory
