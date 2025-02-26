@@ -1,17 +1,19 @@
-import {Fragment} from 'react';
-import {Button} from '@/components/ui/button.jsx'
+
+import React, {useEffect, useState} from 'react';
+import {Routes, Route, Navigate} from 'react-router-dom';
+import AuthPage from '@/pages/auth/AuthPage.jsx';
+import ChatPage from '@/pages/chat/ChatPage.jsx';
+import ProfilePage from '@/pages/profile/ProfilePage.jsx';
 
 export default function App() {
 
    return (
-      <Fragment>
-         <h2 className="text-3xl text-center p-8 font-semibold">Vite React Project
-            with Tailwind CSS v4 and Shadcn UI</h2>
-         <div className="w-full max-w-7xl mx-auto p-8">
-            <Button>Click Me</Button>
-            <button>Submit</button>
-         </div>
-      </Fragment>
+         <Routes>
+            <Route path='/auth' element={<AuthPage />} />
+            <Route path='/chat' element={<ChatPage />} />
+            <Route path='/profile' element={<ProfilePage />} />
+            <Route path="*" element={<Navigate to="/auth" />} />
+         </Routes>
 
    );
 }
