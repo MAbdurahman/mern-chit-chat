@@ -204,6 +204,9 @@
   }
 }
 
+.background {
+  background-image: url('@/assets/background-black-and-white.png');
+}
 
 .move-in-from-right {
   animation-name: move-in-from-right;
