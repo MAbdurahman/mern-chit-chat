@@ -2,6 +2,7 @@ import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {validateUserInfo, validateEmailPassword} from '@/utils/functionUtils.js';
 import useNotification from '@/hooks/useNotification.jsx';
+import PasswordStrengthMeter from '@/components/common/PasswordStrengthMeter.jsx';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@radix-ui/react-tabs';
 import {Input} from '@/components/ui/input.jsx';
 import {Button} from '@/components/ui/button.jsx';
@@ -29,7 +30,7 @@ export default function AuthPage() {
       <div
          className="background h-[100vh] w-[100vw] flex items-center justify-center">
          <div
-            className="h-[80vh] bg-white  border-2 border-white  text-opacity-90 shadow-2xl w-[80vw] md:w-[90vw] lg:w-[70vw] xl:w-[60vw] rounded-200">
+            className="max-h-auto border-2 bg-neutral-000 border-white  text-opacity-90 shadow-2xl w-[80vw] md:w-[90vw] lg:w-[70vw] xl:w-[60vw] rounded-200">
             <div className="text-center">
                <h1
                   className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">CHIT-CHAT</h1>
@@ -96,6 +97,7 @@ export default function AuthPage() {
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                      />
+                     <PasswordStrengthMeter password={password} />
                      <Button className="rounded-200 p-6 font-semibold cursor-pointer" onClick={handleSignUp}>
                         SIGN UP
                      </Button>
