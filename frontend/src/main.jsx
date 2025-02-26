@@ -1,7 +1,7 @@
 
 import {createRoot} from 'react-dom/client'
 import {BrowserRouter} from 'react-router-dom';
-import NotificationProvider from './context/notificationContext.jsx';
+import NotificationProvider from '@/context/notificationContext.jsx';
 import './index.css'
 import App from './app/App.jsx'
 
