@@ -9,6 +9,7 @@ export default function App() {
             with Tailwind CSS v4 and Shadcn UI</h2>
          <div className="w-full max-w-7xl mx-auto p-8">
             <Button>Click Me</Button>
+            <button>Submit</button>
          </div>
       </Fragment>
 
